@@ -49,4 +49,26 @@ def data_extractor_step3():
         #print(art_work_dict)
         artist_list.append(art_work_dict)
     return json.dumps(artist_list, ensure_ascii=False)
-print(data_extractor_step3())
+#print(data_extractor_step3())
+
+#**Modify your script one more time, separating the currency from the amount.**
+
+def data_extractor_step4():
+    artist_list = []
+    dir_path = r"./lot-parser/data/2015-03-18"
+    for file_name in glob.glob(os.path.join(dir_path, "*.html")):
+        with open(file_name) as html_file:
+            soup = BeautifulSoup(html_file, features="lxml")
+        title = soup.find('title').get_text()
+        artist_split, works = title.strip().split(":", 1)
+        all_divs = soup.find_all('div')
+        price = all_divs[1].text
+        currency, amount = price.split(' ')
+        #amount = price.split(' ')[1]
+        #works = title.split(":")[1].strip()
+        art_work_dict = {"artist": artist_split, "works": [{"title": works.strip(), "currency": currency, "amount": amount}]}
+        #print(art_work_dict)
+        artist_list.append(art_work_dict)
+    return json.dumps(artist_list, ensure_ascii=False)
+
+#print(data_extractor_step4())
