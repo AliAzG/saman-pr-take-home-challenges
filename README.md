@@ -6,7 +6,7 @@ pip install -r requirements.txt
 ```
 ## How to run the program for html parser:
 ```
-python3 html_parse.py [step1, step2,..., step8]
+python3 html_parser.py [step1, step2,..., step8]
 ```
 for example to run step1 just run:
 ```
