@@ -10,7 +10,7 @@ python3 html_parser.py [step1, step2,..., step8]
 ```
 for example to run step1 just run:
 ```
-python3 html_parse.py step1
+python3 html_parser.py step1
 ```
 ## What each step mean
 * step1: Write a script that parses the HTML files in that directory, extracts the artist names and outputs a JSON array of the unique names to stdout.
