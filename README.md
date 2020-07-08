@@ -69,8 +69,9 @@ You can send your message to the API using curl. run the following command in te
 ```
 curl -X POST '0.0.0.0:5002/service/morse' -d "message=THIS IS A TEST"
 ```
-Instead of *THIS IS A TEST* you can write your own message
-**Make sure you write your own message all in CAPITALS**
+Instead of *THIS IS A TEST* you can write your own message.
+
+* **Make sure you write your own message all in CAPITALS**
 
 ## OUTPUT
 The output is something like this:
