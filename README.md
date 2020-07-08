@@ -1,10 +1,10 @@
 # Saman PR Take Home Challenges
-All works have done by Ali Aminzadeh Gohari
-## Getting Started
+All works were done by Ali Aminzadeh Gohari.
+## Getting Started Challenge1: HTML PASER
 ```
 pip install -r requirements.txt
 ```
-## How to run the program
+## How to run the program for html parser:
 ```
 python3 html_parse.py [step1, step2,..., step8]
 ```
@@ -58,3 +58,22 @@ Example:
 ]
 ```
 * step5 to step8 do the same things for `2017-12-20` directory.
+
+## Getting Started Challenge2: MORSE SERVICE
+Just run the following command in your terminal to start the Flask API:
+```
+python3 morse_service.py --host '0.0.0.0' --port '5002'
+```
+## How to Send a Request to the API:
+You can send your message to the API using curl. run the following command in terminal:
+```
+curl -X POST '0.0.0.0:5002/service/morse' -d "message=THIS IS A TEST"
+```
+Instead of *THIS IS A TEST* you can write your own message
+**Make sure you write your own message all in CAPITALS**
+
+## OUTPUT
+The output is something like this:
+```
+{"Base64":"VEhJUyBJUyBBIFRFU1Q=","Morse Code":"- .... .. ...  .. ...  .-  - . ... - "}
+```
